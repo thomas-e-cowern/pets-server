@@ -1,8 +1,22 @@
 const express = require('express');
 const app = express()
 
-app.get('/', (req, res) => {
-	res.json({message: "Hello World"})
+// pet-listings
+app.get('/pet-listing', (req, res) => {
+	
+	const model = {
+		pageTile: 'Pets',
+		components: [
+			{
+				type: 'featuredImage',
+				data: {
+					imageUrl: "https://unsplash.com/photos/gKXKBY-C-Dk"
+				}
+			}
+		]
+	}
+	
+	res.json(model)
 })
 
 app.listen(3000, () => {
