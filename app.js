@@ -30,6 +30,14 @@ const pets = [
     }
 ]
 
+// pet-detail/:petId
+app.get("/pet-detail/:petId", (req, res) => {
+    
+    const petId = parseInt(req.params.petId)
+    
+    const pet = pets.find(pet => pet.petId == petId)
+})
+
 // /pet-listing 
 app.get('/pet-listing', (req, res) => {
 
