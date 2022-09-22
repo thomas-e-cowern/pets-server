@@ -36,6 +36,29 @@ app.get("/pet-detail/:petId", (req, res) => {
     const petId = parseInt(req.params.petId)
     
     const pet = pets.find(pet => pet.petId == petId)
+    
+    const model = {
+        "pageTitle": "Pets",
+        "components": [{
+            "type": "featuredImage",
+            "data": {
+                "imageUrl": pet.imageUrl
+            }
+        },
+        {
+            "type": "textRow",
+            "data": {
+                "text": pet.description
+            }
+        },
+            {
+                "type": "rating",
+                "data": {
+                    "rating": pet.rating
+                }
+            }
+        ]
+    }
 })
 
 // /pet-listing 
