@@ -59,6 +59,7 @@ app.get("/pet-detail/:petId", (req, res) => {
             }
         ]
     }
+    res.json(model)
 })
 
 // /pet-listing 
