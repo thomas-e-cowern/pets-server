@@ -40,7 +40,12 @@ app.get('/pet-listing', (req, res) => {
             {
                 "type": "carousel",
                 "data": {
-                    "items": pets,
+                    "items": pets.map(pet => {
+                        return {
+                            petId: pet.petId,
+                            imageUrl: pet.imageUrl
+                        }
+                    }),
                     "action" : {
                         "type": "sheet",
                         "destination": "petDetail"
