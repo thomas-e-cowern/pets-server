@@ -50,13 +50,13 @@ app.get("/pet-detail/:petId", (req, res) => {
             "data": {
                 "text": pet.description
             }
-        },
-            {
-                "type": "rating",
-                "data": {
-                    "rating": pet.rating
-                }
-            }
+        }
+//          {
+//              "type": "rating",
+//              "data": {
+//                  "rating": pet.rating
+//              }
+//          }
         ]
     }
     res.json(model)
