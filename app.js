@@ -87,7 +87,17 @@ app.get('/pet-listing', (req, res) => {
                         "destination": "petDetail"
                     }
                 }
-            }]
+            },
+        {
+            type: "list",
+            data: {
+                rows: pets,
+                action: {
+                    type: "push",
+                    destination: "petDetail"
+                }
+            }
+        }]
     }
 
     res.json(model)
