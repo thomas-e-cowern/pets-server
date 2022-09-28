@@ -91,7 +91,15 @@ app.get('/pet-listing', (req, res) => {
         {
             type: "list",
             data: {
-                rows: pets,
+                rows: [
+                    {
+                        id: 1,
+                        title: "fluffy",
+                        subTitle: "This is a great pet",
+                        imageUrl: "https://unsplash.com/photos/HLhvZ9HRAwo",
+                        description: "The description goes here..."
+                    }
+                ],
                 action: {
                     type: "push",
                     destination: "petDetail"
