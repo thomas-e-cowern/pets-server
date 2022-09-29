@@ -96,7 +96,7 @@ app.get('/pet-listing', (req, res) => {
                         id: 1,
                         title: "fluffy",
                         subTitle: "This is a great pet",
-                        imageUrl: "https://unsplash.com/photos/HLhvZ9HRAwo",
+                        imageUrl: "https://media.istockphoto.com/photos/top-view-of-hurricane-alex-atlantic-hurricane-sprawls-across-the-gulf-picture-id1410510792?s=612x612",
                         description: "The description goes here..."
                     },
                     {
